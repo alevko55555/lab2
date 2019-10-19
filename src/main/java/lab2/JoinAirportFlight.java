@@ -1,7 +1,10 @@
 package lab2;
 
+import org.apache.hadoop.mapreduce.Job;
+
 public class JoinAirportFlight {
     public static void main(String args[]) throws Exception {
-        int k = 1;
+        Job job = Job.getInstance();
+        
     }
 }
