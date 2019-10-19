@@ -1,4 +1,6 @@
 package lab2;
 
-public class MapperFlight {
+public class MapperFlight extends Mapper<, Text, , Text> {
+    @Override
+    
 }
