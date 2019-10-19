@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package lab2;
 
 public class MapperAiroport {
 }
