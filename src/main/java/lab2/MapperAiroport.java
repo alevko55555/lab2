@@ -1,4 +1,5 @@
 package lab2;
 
-public class MapperAiroport {
+public class MapperAiroport extends Mapper<, Text, , Text>{
+    
 }
