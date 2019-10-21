@@ -2,8 +2,13 @@ package lab2;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapreduce.Partitioner;
+
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
 
 public class AirportID implements WritableComparable<AirportID> {
     private LongWritable value;
@@ -19,9 +24,24 @@ public class AirportID implements WritableComparable<AirportID> {
         this.id = new IntWritable(id);
     }
 
-    public class HashPartitioner<> extends Partitioner<>{
-        public int getPartition(key, value, int numReduceTasks) {
-            
+    @Override
+    public int compareTo(AirportID airportID) {
+        return 0;
+    }
+
+    @Override
+    public void write(DataOutput dataOutput) throws IOException {
+
+    }
+
+    @Override
+    public void readFields(DataInput dataInput) throws IOException {
+
+    }
+
+    public class HashPartitioner extends Partitioner<AirportID, Text>{
+        public int getPartition(AirportID key, Text value, int numReduceTasks) {
+            return ((key.value.hashCode() & Integer.MAX_VALUE)) % numReduceTasks;
         }
     }
 }
