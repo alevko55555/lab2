@@ -1,4 +1,7 @@
 package lab2;
 
-public class AirportID {
+import org.apache.hadoop.io.WritableComparable;
+
+public class AirportID implements WritableComparable<AirportID> {
+    
 }
