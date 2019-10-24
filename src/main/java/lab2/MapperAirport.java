@@ -14,5 +14,6 @@ public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
         }
         AirportParser airportParser = new AirportParser(value.toString());
         
+        context.write();
     }
 }
