@@ -6,6 +6,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapreduce.Partitioner;
 
+import java.awt.datatransfer.DataFlavor;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -43,11 +44,5 @@ public class AirportID implements WritableComparable<AirportID> {
     public void readFields(DataInput dataInput) throws IOException {
         value.readFields(dataInput);
         id.readFields(dataInput);
-    }
-
-    public class HashPartitioner extends Partitioner<AirportID, Text>{
-        public int getPartition(AirportID key, Text value, int numReduceTasks) {
-            return ((key.value.hashCode() & Integer.MAX_VALUE)) % numReduceTasks;
-        }
     }
 }
