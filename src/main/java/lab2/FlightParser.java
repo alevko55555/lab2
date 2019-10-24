@@ -4,7 +4,4 @@ public class FlightParser {
     public FlightParser(String str) {
 
     }
-    public getIdAirport() {
-
-    }
 }
