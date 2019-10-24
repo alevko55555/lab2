@@ -8,7 +8,7 @@ public class AirportParser extends ParserUtils{
         super(str);
     }
     public Optional<Long> getIdAirport() {
-        return getString(0);
+        return getLong(0);
     }
     public Optional<String> getInfoAirport() {
         return getString(1);
