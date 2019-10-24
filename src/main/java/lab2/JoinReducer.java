@@ -14,5 +14,7 @@ public class JoinReducer extends Reducer<AirportID, Text, Text, Text> {
         if(!iter.hasNext()) {
             return;
         }
+        long count = 0;
+        
     }
 }
