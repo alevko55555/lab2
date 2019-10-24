@@ -9,6 +9,8 @@ import java.io.IOException;
 public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        
+        if (key.get() == 0) {
+            return;
+        }
     }
 }
