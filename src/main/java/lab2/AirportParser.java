@@ -1,16 +1,16 @@
 package lab2;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
-public class AirportParser {
+public class AirportParser extends ParserUtils{
     public AirportParser(String str) {
-
+        super(str);
     }
-    public String getIdAirport() {
-
-        return();
+    public Optional<String> getIdAirport() {
+        return getString(0);
     }
-    public String getInfoAirport() {
-        return();
+    public Optional<String> getInfoAirport() {
+        return getString(0);
     }
 }
