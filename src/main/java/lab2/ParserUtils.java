@@ -6,7 +6,7 @@ public class ParserUtils {
     private static String[] part;
 
     ParserUtils(String str) {
-        part = str.split(",[\"]");
+        part = str.split(",");
         for(int i = 0; i < part.length; i++) {
             part[i] = part[i].replaceAll("\"", "");
         }
