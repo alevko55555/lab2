@@ -16,10 +16,10 @@ public class JoinAirportFlight {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, MapperFlight.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
-        job.setPartitionerClass(TextPair.FirstPartitioner.class);
-        job.setGroupingComparatorClass(TextPair.FirstComparator.class);
+        //job.setPartitionerClass(AirportID.FirstPartitioner.class);
+        //job.setGroupingComparatorClass(AirportID.FirstComparator.class);
         job.setReducerClass(JoinReducer.class);
-        job.setMapOutputKeyClass(TextPair.class);
+        job.setMapOutputKeyClass(AirportID.class);
         job.setMapOutputValueClass(Text.class);
 
         job.setOutputKeyClass(Text.class);
