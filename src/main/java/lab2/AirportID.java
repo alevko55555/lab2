@@ -35,12 +35,14 @@ public class AirportID implements WritableComparable<AirportID> {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        
+        value.write(dataOutput);
+        id.write(dataOutput);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-
+        value.readFields(dataInput);
+        id.readFields(dataInput);
     }
 
     public class HashPartitioner extends Partitioner<AirportID, Text>{
