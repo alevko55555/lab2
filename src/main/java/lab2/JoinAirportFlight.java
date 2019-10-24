@@ -13,8 +13,6 @@ public class JoinAirportFlight {
             System.err.println("Usage: lab2.JoinAirportFlight <input path> <output path>");
             System.exit(-1);
         }
-
-        int i = 0;
         
 
         Job job = Job.getInstance();
