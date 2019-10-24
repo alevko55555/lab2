@@ -17,7 +17,7 @@ public class JoinAirportFlight {
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(FlightPartitioner.class);
-        //job.setGroupingComparatorClass(AirportID.FirstComparator.class);
+        job.setGroupingComparatorClass(FlightComparator.class);
         job.setReducerClass(JoinReducer.class);
         job.setMapOutputKeyClass(AirportID.class);
         job.setMapOutputValueClass(Text.class);
