@@ -9,7 +9,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class JoinAirportFlight {
     public static void main(String args[]) throws Exception {
-        if (args.length != 2) {
+        if (args.length != 3) {
             System.err.println("Usage: lab2.JoinAirportFlight <input path> <output path>");
             System.exit(-1);
         }
