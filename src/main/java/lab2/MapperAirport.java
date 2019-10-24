@@ -12,5 +12,7 @@ public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
         if (key.get() == 0) {
             return;
         }
+        AirportParser airportParser = new AirportParser(value.toString());
+        
     }
 }
