@@ -1,11 +1,14 @@
 package lab2;
 
+import java.util.ArrayList;
+
 public class AirportParser {
     public AirportParser(String str) {
 
     }
     public String getIdAirport() {
-        String num = 
+        ArrayList<String> arr = new ArrayList<>();
+        String num = arr.get()
         return();
     }
     public String getInfoAirport() {
