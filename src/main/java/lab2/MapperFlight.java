@@ -18,6 +18,7 @@ public class MapperFlight extends Mapper<LongWritable, Text, AirportID, Text> {
         String delay = flightParser.getDelay();
 //        Optional<String> airportId = flightParser.getDelayIdAirport();
 //        Optional<String> delay = flightParser.getDelay();
-        context.write(new AirportID(airportId.get(),1), new Text(delay.get().toString()));
+        //context.write(new AirportID(airportId.get(),1), new Text(delay.get().toString()));
+        context.write(new AirportID(airportId,1), new Text(delay));
     }
 }

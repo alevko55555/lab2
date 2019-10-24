@@ -5,7 +5,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
-import java.util.Optional;
+//import java.util.Optional;
 
 public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
     @Override
@@ -14,8 +14,11 @@ public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
             return;
         }
         AirportParser airportParser = new AirportParser(value.toString());
-        Optional<String> airportId = airportParser.getIdAirport();
-        Optional<String> airportInfo = airportParser.getInfoAirport();
-        context.write(new AirportID(airportId.get(), 0), new Text(airportInfo.get()));
+//        Optional<String> airportId = airportParser.getIdAirport();
+//        Optional<String> airportInfo = airportParser.getInfoAirport();
+//        context.write(new AirportID(airportId.get(), 0), new Text(airportInfo.get()));
+        String airportId = airportParser.getIdAirport();
+        String airportInfo = airportParser.getInfoAirport();
+        context.write(new AirportID(airportId, 0), new Text(airportInfo));
     }
 }
