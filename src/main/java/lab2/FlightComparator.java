@@ -6,4 +6,8 @@ public class FlightComparator  extends WritableComparator {
     public FlightComparator() {
         super (AirportID.class, true) ;
     }
+    @Override
+    public int compare() {
+        
+    }
 }
