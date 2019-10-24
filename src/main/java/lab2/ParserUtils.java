@@ -3,7 +3,7 @@ package lab2;
 import java.util.Optional;
 
 public class ParserUtils {
-    private static String[] part;
+    private String[] part;
 
     ParserUtils(String str) {
         part = str.split(",");
@@ -13,9 +13,6 @@ public class ParserUtils {
     }
 
     Optional<String> getString(int index) {
-        return Optional.of(part[index]);
-    }
-    Optional<Long> getLong(int index) {
         return Optional.of(part[index]);
     }
 }
