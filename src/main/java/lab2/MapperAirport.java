@@ -13,7 +13,6 @@ public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
             return;
         }
         AirportParser airportParser = new AirportParser(value.toString());
-        
-        context.write();
+        context.write(new AirportID(airportParser.getIdAirport(), 0), new Text(airportParser.getInfoAirport()));
     }
 }
