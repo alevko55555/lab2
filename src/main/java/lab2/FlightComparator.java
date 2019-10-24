@@ -1,4 +1,9 @@
 package lab2;
 
-public class FlightComparator {
+import org.apache.hadoop.io.WritableComparator;
+
+public class FlightComparator  extends WritableComparator {
+    public FlightComparator() {
+        
+    }
 }
