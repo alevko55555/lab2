@@ -9,6 +9,8 @@ public class FlightComparator  extends WritableComparator {
     }
     @Override
     public int compare(WritableComparable o1, WritableComparable o2) {
-        AirportID o1 = (AirportID) 
+        AirportID a = (AirportID) o1;
+        AirportID b = (AirportID) o2;
+        return a.getValueAirportId().compareTo(b.getValueAirportId());
     }
 }
