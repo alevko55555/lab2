@@ -15,6 +15,11 @@ public class JoinReducer extends Reducer<AirportID, Text, Text, Text> {
             return;
         }
         long count = 0;
-        long min = Long.M
+        long min = Long.MAX_VALUE;
+        long mid = 0;
+        long max = Long.MIN_VALUE;
+        while (iter.hasNext()) {
+            
+        }
     }
 }
