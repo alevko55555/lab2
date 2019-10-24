@@ -15,6 +15,6 @@ public class JoinReducer extends Reducer<AirportID, Text, Text, Text> {
             return;
         }
         long count = 0;
-        
+        long min
     }
 }
