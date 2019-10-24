@@ -23,6 +23,9 @@ public class JoinReducer extends Reducer<AirportID, Text, Text, Text> {
             min = Math.min(comp, min);
             max = Math.max(comp, max);
             mid += comp;
+            count++;
         }
+        mid = mid / count;
+        context.write(new Text(characteristic), new Text(mid + " " + min + " " + max));
     }
 }
