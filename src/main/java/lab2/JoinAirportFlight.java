@@ -9,6 +9,10 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class JoinAirportFlight {
     public static void main(String args[]) throws Exception {
+        if(args.length != 2) {
+            System.err.println("");
+        }
+
         Job job = Job.getInstance();
         job.setJarByClass(JoinAirportFlight.class);
         job.setJobName("JoinAirportFlight");
