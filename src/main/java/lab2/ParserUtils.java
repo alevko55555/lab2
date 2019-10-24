@@ -15,4 +15,7 @@ public class ParserUtils {
     Optional<String> getString(int index) {
         return Optional.of(part[index]);
     }
+    Optional<Long> getLong(int index) {
+        return Optional.of(part[index]);
+    }
 }
