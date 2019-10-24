@@ -7,6 +7,6 @@ public class FlightPartitioner extends Partitioner<AirportID, Text> {
     public FlightPartitioner() { }
 
     public int getPartition(AirportID key, Text value, int numReduceTasks) {
-        return ((key.value.hashCode() & Integer.MAX_VALUE)) % numReduceTasks;
+        return ((key.getValueAirportId().hashCode() & Integer.MAX_VALUE)) % numReduceTasks;
     }
 }

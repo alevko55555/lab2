@@ -2,11 +2,8 @@ package lab2;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
-import org.apache.hadoop.mapreduce.Partitioner;
 
-import java.awt.datatransfer.DataFlavor;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -44,5 +41,9 @@ public class AirportID implements WritableComparable<AirportID> {
     public void readFields(DataInput dataInput) throws IOException {
         value.readFields(dataInput);
         id.readFields(dataInput);
+    }
+
+    public LongWritable getValueAirportId() {
+        return value;
     }
 }
