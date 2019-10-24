@@ -1,13 +1,15 @@
 package lab2;
 
-public class FlightParser {
-    public FlightParser(String str) {
+import java.util.Optional;
 
+public class FlightParser extends ParserUtils{
+    public FlightParser(String str) {
+        super(str);
     }
-    public String getDelayIdAirport() {
-        return();
+    public Optional<String> getDelayIdAirport() {
+        return getString(14);
     }
-    public String getDelay() {
-        return();
+    public Optional<String> getDelay() {
+        return getString(18);
     }
 }
