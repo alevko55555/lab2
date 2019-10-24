@@ -11,6 +11,6 @@ public class AirportParser extends ParserUtils{
         return getString(0);
     }
     public Optional<String> getInfoAirport() {
-        return getString(0);
+        return getString(1);
     }
 }
