@@ -1,0 +1,10 @@
+lab2/AirportID.class
+lab2/AirportParser.class
+lab2/MapperAirport.class
+lab2/JoinAirportFlight.class
+lab2/JoinReducer.class
+lab2/ParserUtils.class
+lab2/FlightParser.class
+lab2/FlightComparator.class
+lab2/MapperFlight.class
+lab2/FlightPartition.class
