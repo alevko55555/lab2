@@ -16,7 +16,7 @@ public class JoinAirportFlight {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, MapperFlight.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
-        job.setPartitionerClass(AirportID.FlightPartitioner.class);
+        job.setPartitionerClass(FlightPartitioner.class);
         //job.setGroupingComparatorClass(AirportID.FirstComparator.class);
         job.setReducerClass(JoinReducer.class);
         job.setMapOutputKeyClass(AirportID.class);
