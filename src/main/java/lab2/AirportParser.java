@@ -8,7 +8,9 @@ public class AirportParser {
     }
     public String getIdAirport() {
         ArrayList<String> arr = new ArrayList<>();
-        String num = arr.get()
+        while () {
+            
+        }
         return();
     }
     public String getInfoAirport() {
