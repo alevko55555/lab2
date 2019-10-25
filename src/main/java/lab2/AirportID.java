@@ -23,11 +23,6 @@ public class AirportID implements WritableComparable<AirportID> {
         this.id = new IntWritable(id);
     }
 
-    public AirportID(String s, int id) {
-        this.value = new LongWritable(Long.parseLong(s));
-        this.id = new IntWritable(id);
-    }
-
     @Override
     public int compareTo(AirportID airportID) {
         int compID = value.compareTo(airportID.value);
