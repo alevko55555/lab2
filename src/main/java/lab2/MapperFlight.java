@@ -19,7 +19,7 @@ public class MapperFlight extends Mapper<LongWritable, Text, AirportID, Text> {
 //        Optional<String> airportId = flightParser.getDelayIdAirport();
 //        Optional<String> delay = flightParser.getDelay();
         //context.write(new AirportID(airportId.get(),1), new Text(delay.get().toString()));
-        if (!delay.equals("0.0")) {
+        if ((long)Double.parseDouble(delay) != 0) {
             context.write(new AirportID(Long.parseLong(airportId),1), new Text(delay));
         }
     }
