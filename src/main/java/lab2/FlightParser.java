@@ -10,7 +10,8 @@ public class FlightParser extends ParserUtils{
         return getString(14);
     }
     public String getDelay() {
-        return getString(18);
+        String delay = getString(18);
+        return delay.isEmpty() ? "0.0" : delay;
     }
 //    public Optional<String> getDelayIdAirport() {
 //        return getString(14);
