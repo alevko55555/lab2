@@ -5,7 +5,6 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
-//import java.util.Optional;
 
 public class MapperFlight extends Mapper<LongWritable, Text, AirportID, Text> {
     @Override
@@ -16,9 +15,6 @@ public class MapperFlight extends Mapper<LongWritable, Text, AirportID, Text> {
         FlightParser flightParser = new FlightParser(value.toString());
         String airportId = flightParser.getDelayIdAirport();
         String delay = flightParser.getDelay();
-//        Optional<String> airportId = flightParser.getDelayIdAirport();
-//        Optional<String> delay = flightParser.getDelay();
-        //context.write(new AirportID(airportId.get(),1), new Text(delay.get().toString()));
         if ((long)Double.parseDouble(delay) != 0) {
             context.write(new AirportID(Long.parseLong(airportId),1), new Text(delay));
         }

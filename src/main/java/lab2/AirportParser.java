@@ -12,10 +12,4 @@ public class AirportParser extends ParserUtils{
     public String getInfoAirport() {
         return getString(1);
     }
-    /*public Optional<String> getIdAirport() {
-        return getString(0);
-    }
-    public Optional<String> getInfoAirport() {
-        return getString(1);
-    }*/
 }

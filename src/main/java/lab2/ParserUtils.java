@@ -1,7 +1,5 @@
 package lab2;
 
-//import java.util.Optional;
-
 import java.util.ArrayList;
 
 public class ParserUtils {
@@ -17,8 +15,4 @@ public class ParserUtils {
     String getString(int index) {
         return part.get(index);
     }
-
-//    Optional<String> getString(int index) {
-//        return Optional.of(part[index]);
-//    }
 }

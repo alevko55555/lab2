@@ -26,6 +26,6 @@ public class JoinReducer extends Reducer<AirportID, Text, Text, Text> {
             count++;
         }
         mid = mid / count;
-        context.write(new Text(characteristic), new Text("Average time = " + mid + " Minimum time" + min + " Maximum time" + max));
+        context.write(new Text(characteristic), new Text("Average time = " + mid + " Minimum time = " + min + " Maximum time = " + max));
     }
 }

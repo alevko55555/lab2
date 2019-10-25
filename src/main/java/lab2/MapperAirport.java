@@ -14,9 +14,6 @@ public class MapperAirport extends Mapper<LongWritable, Text, AirportID, Text> {
             return;
         }
         AirportParser airportParser = new AirportParser(value.toString());
-//        Optional<String> airportId = airportParser.getIdAirport();
-//        Optional<String> airportInfo = airportParser.getInfoAirport();
-//        context.write(new AirportID(airportId.get(), 0), new Text(airportInfo.get()));
         String airportId = airportParser.getIdAirport();
         String airportInfo = airportParser.getInfoAirport();
         context.write(new AirportID(Long.parseLong(airportId), 0), new Text(airportInfo));
