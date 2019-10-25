@@ -19,17 +19,17 @@ public class JoinAirportFlight {
         job.setJobName("JoinAirportFlight");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, MapperAirport.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, MapperFlight.class);
-        throw new Exception();
-//        FileOutputFormat.setOutputPath(job, new Path(args[2]));
-//        job.setPartitionerClass(FlightPartition.class);
-//        job.setGroupingComparatorClass(FlightComparator.class);
-//        job.setReducerClass(JoinReducer.class);
-//        job.setMapOutputKeyClass(AirportID.class);
-//        job.setMapOutputValueClass(Text.class);
-//
-//        job.setOutputKeyClass(Text.class);
-//        job.setOutputValueClass(Text.class);
-//        job.setNumReduceTasks(2);
-//        System.exit(job.waitForCompletion(true) ? 0 : 1);
+
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
+        job.setPartitionerClass(FlightPartition.class);
+        job.setGroupingComparatorClass(FlightComparator.class);
+        job.setReducerClass(JoinReducer.class);
+        job.setMapOutputKeyClass(AirportID.class);
+        job.setMapOutputValueClass(Text.class);
+
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+        job.setNumReduceTasks(2);
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
