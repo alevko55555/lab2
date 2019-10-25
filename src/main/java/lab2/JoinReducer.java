@@ -14,19 +14,18 @@ public class JoinReducer extends Reducer<AirportID, Text, Text, Text> {
         if(!iter.hasNext()) {
             return;
         }
-        throw new IOException();
-//        long count = 0;
-//        long min = Long.MAX_VALUE;
-//        long mid = 0;
-//        long max = Long.MIN_VALUE;
-//        while (iter.hasNext()) {
-//            long comp = Long.parseLong(iter.next().toString());
-//            min = Math.min(comp, min);
-//            max = Math.max(comp, max);
-//            mid += comp;
-//            count++;
-//        }
-//        mid = mid / count;
-//        context.write(new Text(characteristic), new Text("Average time = " + mid + " Minimum time" + min + " Maximum time" + max));
+        long count = 0;
+        long min = Long.MAX_VALUE;
+        long mid = 0;
+        long max = Long.MIN_VALUE;
+        while (iter.hasNext()) {
+            long comp = Long.parseLong(iter.next().toString());
+            min = Math.min(comp, min);
+            max = Math.max(comp, max);
+            mid += comp;
+            count++;
+        }
+        mid = mid / count;
+        context.write(new Text(characteristic), new Text("Average time = " + mid + " Minimum time" + min + " Maximum time" + max));
     }
 }
