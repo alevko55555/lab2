@@ -14,7 +14,7 @@ public class JoinAirportFlight {
             System.exit(-1);
         }
 
-        
+        int i = 0;
         Job job = Job.getInstance();
         job.setJarByClass(JoinAirportFlight.class);
         job.setJobName("JoinAirportFlight");
