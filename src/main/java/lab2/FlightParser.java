@@ -11,7 +11,7 @@ public class FlightParser extends ParserUtils{
     }
     public String getDelay() {
         String delay = getString(18);
-        return delay.isEmpty() ? "0" : delay;
+        return delay.isEmpty() ? "0.0" : delay;
     }
 //    public Optional<String> getDelayIdAirport() {
 //        return getString(14);
