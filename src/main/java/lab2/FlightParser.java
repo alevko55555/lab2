@@ -1,7 +1,5 @@
 package lab2;
 
-//import java.util.Optional;
-
 public class FlightParser extends ParserUtils{
     public FlightParser(String str) {
         super(str);
